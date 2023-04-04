@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section className="flex justify-center px-4" id="hero-section">
-      <div className="text-center my-32">
+      <div className="text-center my-44 md:my-32">
         <h1 className="text-white">
           <div>
             <span className="font-thin text-5xl md:text-6xl">Francis </span>

@@ -1,4 +1,24 @@
+import { useQuery, gql } from "@apollo/client";
+
+const GET_BIO = gql`
+  query GET_BIO {
+    author(where: { name: "Francis Plante" }) {
+      bio
+    }
+  }
+`;
+
 const About = () => {
+  const { loading, error, data } = useQuery(GET_BIO);
+
+  if (loading) {
+    return <div className="text-white">loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-white">error</div>;
+  }
+
   return (
     <section className="relative px-4" id="about-section">
       <div className="flex flex-col md:flex-row gap-10 justify-center container mx-auto my-32">
@@ -9,20 +29,9 @@ const About = () => {
 
         <div className="w-full md:w-1/2 mx-auto">
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
-            ABOUT ME
+            WHO I AM
           </h2>
-          <p className="text-white text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-            aliquid iure aut natus vitae ad porro repellat a culpa autem! Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. Quisquam aperiam
-            commodi, ratione eos iste laudantium assumenda iure ducimus qui
-            quaerat quam modi vitae cupiditate dolor, corrupti tenetur!
-            Accusantium, sequi nulla! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Doloribus in dignissimos voluptates incidunt sed
-            dolorum, sapiente labore cumque? Laudantium quos laborum placeat?
-            Maiores molestias necessitatibus rerum. Numquam atque perferendis
-            in?
-          </p>
+          <p className="text-white text-center">{data.author.bio}</p>
         </div>
       </div>
     </section>

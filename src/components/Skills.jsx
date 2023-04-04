@@ -25,18 +25,18 @@ const Skills = () => {
   }
   console.log(data);
   return (
-    <section className="px-4">
+    <section className="px-4" id="skills-section">
       <div className="container mx-auto">
         <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
           WHAT I KNOW
         </h2>
 
         <div className="flex flex-wrap lg:flex-nowrap gap-4 justify-around ">
-          <div className="bg-slate-700 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-cyan-600/50 border-2 border-cyan-400/25">
+          <div className="bg-gradient-to-b from-purple-900/50 to-cyan-800/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-cyan-700/50 border-2 border-cyan-200/25">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Frontend
             </h3>
-            <div className="grid grid-cols-4 lg:grid-cols-3 gap-y-10 gap-x-4 justify-items-center">
+            <div className="grid grid-cols-3 gap-y-10 gap-x-4 justify-items-center">
               {data.skills
                 .filter((skill) => skill.skillType === "Frontend")
                 .map((skill) => (
@@ -53,11 +53,11 @@ const Skills = () => {
                 ))}
             </div>
           </div>
-          <div className="bg-slate-700 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-green-600/50 border-2 border-green-400/25">
+          <div className="bg-gradient-to-b from-emerald-900/50 to-green-500/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-green-700/50 border-2 border-green-200/25">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Backend
             </h3>
-            <div className="grid grid-cols-4 lg:grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
+            <div className="grid grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
               {data.skills
                 .filter((skill) => skill.skillType === "Backend")
                 .map((skill) => (
@@ -74,11 +74,11 @@ const Skills = () => {
                 ))}
             </div>
           </div>
-          <div className="bg-slate-700 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-yellow-600/50 border-2 border-yellow-400/25">
+          <div className="bg-gradient-to-b from-amber-900/50 to-yellow-500/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-yellow-700/50 border-2 border-yellow-200/25">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Tools
             </h3>
-            <div className="grid grid-cols-4 lg:grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
+            <div className="grid grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
               {data.skills
                 .filter((skill) => skill.skillType === "tools")
                 .map((skill) => (
