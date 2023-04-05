@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import Spinner from "./Spinner";
 
 const Hero = () => {
   return (
     <section className="flex justify-center px-4" id="hero-section">
-      <div className="text-center my-44 md:my-32">
+      <div className="text-center my-32">
         <h1 className="text-white">
           <motion.div
             initial={{ opacity: 0, x: "-1000px" }}

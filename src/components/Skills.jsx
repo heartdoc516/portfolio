@@ -33,11 +33,11 @@ const Skills = () => {
         </h2>
 
         <div className="flex flex-wrap lg:flex-nowrap gap-4 justify-around ">
-          <div className="bg-gradient-to-br from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
+          <div className="bg-gradient-to-bl from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 m-4  border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Frontend
             </h3>
-            <div className="grid grid-cols-3 gap-y-10 gap-x-4 justify-items-center">
+            <div className="grid grid-cols-3 gap-y-10 justify-items-center">
               {data.skills
                 .filter((skill) => skill.skillType === "Frontend")
                 .map((skill) => (
@@ -52,7 +52,7 @@ const Skills = () => {
                 ))}
             </div>
           </div>
-          <div className="bg-gradient-to-b from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
+          <div className="bg-gradient-to-bl from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 m-4 pb-16 border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Backend
             </h3>
@@ -71,7 +71,7 @@ const Skills = () => {
                 ))}
             </div>
           </div>
-          <div className="bg-gradient-to-bl from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
+          <div className="bg-gradient-to-bl from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 m-4 pb-16 border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Tools
             </h3>

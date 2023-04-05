@@ -5,20 +5,22 @@ const Project = ({ project }) => {
         <img
           src={project.image[0].url}
           alt=""
-          className="rounded-t-lg h-96 mx-auto object-contain"
+          className="rounded-t-lg mx-auto object-contain"
         />
       </div>
       <div className="p-10">
         <h3 className="text-white text-center text-2xl mb-6 tracking-widest">
           {project.name}
         </h3>
-        <p className="text-gray-300 mb-6 ">{project.description}</p>
+        <p className="text-gray-300 mb-6 text-center mb:text-left">
+          {project.description}
+        </p>
         <h4 className="text-white text-center text-2xl mb-6 tracking-widest">
           Tech Stack
         </h4>
-        <div className="flex flex-wrap  gap-12 justify-center mb-10">
+        <div className="flex flex-wrap justify-center mb-10">
           {project.skills.map((skill) => (
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center p-4">
               <img
                 src={skill.skillLogo.url}
                 className="h-12 m-0 mb-2 object-cover"

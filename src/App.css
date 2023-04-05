@@ -21,18 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-.avatar-gradient {
-  background: rgb(68, 185, 209);
-
-  background: radial-gradient(
-    circle,
-    rgb(84, 207, 232) 0%,
-    rgba(92, 130, 245, 0.608) 43%,
-    rgba(32, 50, 91, 0.053) 75%,
-    rgba(15, 23, 42, 0) 100%
-  );
-}
-
 .hero-gradient {
   position: absolute;
   z-index: -10;
