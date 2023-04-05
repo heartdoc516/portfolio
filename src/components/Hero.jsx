@@ -1,24 +1,42 @@
+import { motion } from "framer-motion";
+import Spinner from "./Spinner";
+
 const Hero = () => {
   return (
     <section className="flex justify-center px-4" id="hero-section">
       <div className="text-center my-44 md:my-32">
         <h1 className="text-white">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: "-1000px" }}
+            animate={{ opacity: [0, 0.2, 0.3, 0.4, 1], x: "0" }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+            viewport={{ one: true }}
+          >
             <span className="font-thin text-5xl md:text-6xl">Francis </span>
-            <span className="font-extrabold text-transparent text-7xl md:text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-600">
+            <span className="font-extrabold text-transparent text-7xl md:text-8xl bg-clip-text bg-gradient-to-r from-emerald-400 to-indigo-600">
               PLANTE
             </span>
-          </div>
-          <div className="mb-10 text-2xl font-thin tracking-widest">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: "1000px" }}
+            animate={{ opacity: [0, 0.2, 0.3, 0.4, 1], x: "0" }}
+            transition={{ delay: 1.2, duration: 0.5 }}
+            viewport={{ one: true }}
+            className="mb-10 text-2xl font-thin tracking-widest"
+          >
             Web Developper
-          </div>
+          </motion.div>
         </h1>
-        <button
+        <motion.a
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          href="#contact-section"
           type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 rounded-full"
+          className="text-white bg-sky-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none dark:focus:ring-blue-800 rounded-full"
         >
           CONTACT
-        </button>
+        </motion.a>
       </div>
     </section>
   );

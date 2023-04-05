@@ -9,14 +9,14 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <>
+      <div className="hero-gradient"></div>
+      <div className="skills-gradient"></div>
       <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
-
-      <div className="h-40"></div>
     </>
   );
 }

@@ -1,14 +1,18 @@
 const Project = ({ project }) => {
   return (
-    <div className="bg-zinc-900 rounded-lg">
+    <div className="bg-gradient-to-t from-gray-900 via-slate-800 to-cyan-600/25 rounded-lg border border-gray-600">
       <div className="">
-        <img src={project.image[0].url} alt="" className="rounded-t-lg" />
+        <img
+          src={project.image[0].url}
+          alt=""
+          className="rounded-t-lg h-96 mx-auto object-contain"
+        />
       </div>
       <div className="p-10">
         <h3 className="text-white text-center text-2xl mb-6 tracking-widest">
           {project.name}
         </h3>
-        <p className="text-white mb-6 ">{project.description}</p>
+        <p className="text-gray-300 mb-6 ">{project.description}</p>
         <h4 className="text-white text-center text-2xl mb-6 tracking-widest">
           Tech Stack
         </h4>

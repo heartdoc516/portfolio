@@ -1,4 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
+import Spinner from "./Spinner";
 
 const GET_SKILLS = gql`
   query skills {
@@ -17,7 +18,7 @@ const Skills = () => {
   const { loading, error, data } = useQuery(GET_SKILLS);
 
   if (loading) {
-    return <div className="text-white">loading...</div>;
+    return <Spinner />;
   }
 
   if (error) {
@@ -25,14 +26,14 @@ const Skills = () => {
   }
   console.log(data);
   return (
-    <section className="px-4" id="skills-section">
-      <div className="container mx-auto">
+    <section className="px-4 " id="skills-section">
+      <div className="container mx-auto ">
         <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
           WHAT I KNOW
         </h2>
 
         <div className="flex flex-wrap lg:flex-nowrap gap-4 justify-around ">
-          <div className="bg-gradient-to-b from-purple-900/50 to-cyan-800/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-cyan-700/50 border-2 border-cyan-200/25">
+          <div className="bg-gradient-to-br from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Frontend
             </h3>
@@ -46,14 +47,12 @@ const Skills = () => {
                       alt=""
                       className="h-12 m-0 object-cover"
                     />
-                    <h3 className="text-white text-sm font-light mt-6">
-                      {skill.name}
-                    </h3>
+                    <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>
                 ))}
             </div>
           </div>
-          <div className="bg-gradient-to-b from-emerald-900/50 to-green-500/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-green-700/50 border-2 border-green-200/25">
+          <div className="bg-gradient-to-b from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Backend
             </h3>
@@ -67,14 +66,12 @@ const Skills = () => {
                       alt=""
                       className="h-12 m-0 object-cover"
                     />
-                    <h3 className="text-white text-sm font-light mt-6">
-                      {skill.name}
-                    </h3>
+                    <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>
                 ))}
             </div>
           </div>
-          <div className="bg-gradient-to-b from-amber-900/50 to-yellow-500/50 w-full lg:w-1/3 rounded-lg p-8 pb-16 shadow-2xl shadow-yellow-700/50 border-2 border-yellow-200/25">
+          <div className="bg-gradient-to-bl from-gray-600/50  to-gray-950 w-full lg:w-1/3 rounded-lg p-8 pb-16 border border-gray-700">
             <h3 className="text-white text-center text-2xl mb-14 tracking-widest">
               Tools
             </h3>
@@ -88,9 +85,7 @@ const Skills = () => {
                       alt=""
                       className="h-12 m-0 object-cover"
                     />
-                    <h3 className="text-white text-sm font-light mt-6">
-                      {skill.name}
-                    </h3>
+                    <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>
                 ))}
             </div>

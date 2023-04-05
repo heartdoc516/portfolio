@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import Project from "./Project";
+import Spinner from "./Spinner";
 
 const ALL_PROJECTS = gql`
   query ALL_PROJECTS {
@@ -27,7 +28,7 @@ const Projects = () => {
   const { loading, error, data } = useQuery(ALL_PROJECTS);
 
   if (loading) {
-    return <div className="text-white">loading...</div>;
+    return <Spinner />;
   }
 
   if (error) {

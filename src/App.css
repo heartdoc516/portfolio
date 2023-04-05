@@ -14,10 +14,11 @@ html {
 
 body {
   font-family: Inter, sans-serif;
-  background-color: #0f172a;
-  background-image: radial-gradient(rgba(76, 76, 76, 0.549) 1px, transparent 0);
+  background-color: #111827;
+  background-image: radial-gradient(rgba(77, 77, 77, 0.549) 1px, transparent 0);
   background-size: 40px 40px;
   position: relative;
+  overflow-x: hidden;
 }
 
 .avatar-gradient {
@@ -25,9 +26,9 @@ body {
 
   background: radial-gradient(
     circle,
-    rgba(68, 185, 209, 1) 0%,
-    rgba(68, 103, 209, 0.608) 55%,
-    rgba(32, 50, 91, 0.053) 73%,
+    rgb(84, 207, 232) 0%,
+    rgba(92, 130, 245, 0.608) 43%,
+    rgba(32, 50, 91, 0.053) 75%,
     rgba(15, 23, 42, 0) 100%
   );
 }
@@ -36,9 +37,32 @@ body {
   position: absolute;
   z-index: -10;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 600px;
+  border-radius: 50px;
+  right: -300px;
+  height: 1000px;
+  width: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(68, 185, 209, 0.4654236694677871) 0%,
+    rgba(28, 77, 84, 0.2805497198879552) 47%,
+    rgba(15, 41, 42, 0.258140756302521) 60%,
+    rgba(15, 41, 42, 0.06766456582633051) 72%
+  );
+}
 
-  background-color: aqua;
+.skills-gradient {
+  position: absolute;
+  z-index: -10;
+  top: 32%;
+  border-radius: 50px;
+  left: -200px;
+  height: 1000px;
+  width: 1200px;
+  background: radial-gradient(
+    circle,
+    rgba(68, 209, 162, 0.465) 0%,
+    rgba(28, 77, 84, 0.2805497198879552) 47%,
+    rgba(15, 41, 42, 0.258140756302521) 60%,
+    rgba(15, 41, 42, 0.06766456582633051) 72%
+  );
 }
