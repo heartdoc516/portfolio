@@ -11,6 +11,7 @@ function App() {
     <>
       <div className="hero-gradient"></div>
       <div className="skills-gradient"></div>
+
       <Navbar />
       <Hero />
       <About />

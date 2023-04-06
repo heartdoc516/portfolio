@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm";
 import { Linkedin, GitHub, Mail } from "react-feather";
 
 const Contact = () => {
@@ -13,7 +14,10 @@ const Contact = () => {
             alt=""
             className="w-28 mx-auto mb-12"
           />
-          <div className="flex flex-row justify-center">
+
+          <ContactForm />
+
+          <div className="flex flex-row justify-center mb-8">
             <a
               target="_blank"
               href="https://www.linkedin.com/in/francis-plante-71538125a/"
@@ -29,10 +33,8 @@ const Contact = () => {
               <GitHub className="text-cyan-500" />
             </a>
           </div>
-          <div className="text-gray-400 text-center text-sm mt-6">
-            francis.plante.855@gmail.com
-          </div>
-          <div className="text-gray-400 text-xs text-center my-2">
+
+          <div className="text-gray-400 text-xs text-center">
             Coded by Me &#9400; 2023
           </div>
         </div>
