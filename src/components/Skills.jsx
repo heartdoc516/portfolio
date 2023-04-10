@@ -1,30 +1,4 @@
-import { useQuery, gql } from "@apollo/client";
-import Spinner from "./Spinner";
-
-const GET_SKILLS = gql`
-  query skills {
-    skills {
-      name
-      skillType
-      skillLogo {
-        fileName
-        url
-      }
-    }
-  }
-`;
-
-const Skills = () => {
-  const { loading, error, data } = useQuery(GET_SKILLS);
-
-  if (loading) {
-    return <Spinner />;
-  }
-
-  if (error) {
-    return <div className="text-white">error</div>;
-  }
-  console.log(data);
+const Skills = ({ skills }) => {
   return (
     <section className="px-4 " id="skills-section">
       <div className="container mx-auto ">
@@ -38,14 +12,14 @@ const Skills = () => {
               Frontend
             </h3>
             <div className="grid grid-cols-3 gap-y-10 justify-items-center">
-              {data.skills
+              {skills
                 .filter((skill) => skill.skillType === "Frontend")
                 .map((skill) => (
                   <div className="flex flex-col items-center">
                     <img
                       src={skill.skillLogo.url}
                       alt=""
-                      className="h-12 m-0 object-cover"
+                      className="h-12 m-0 object-contain"
                     />
                     <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>
@@ -57,14 +31,14 @@ const Skills = () => {
               Backend
             </h3>
             <div className="grid grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
-              {data.skills
+              {skills
                 .filter((skill) => skill.skillType === "Backend")
                 .map((skill) => (
                   <div className="flex flex-col items-center">
                     <img
                       src={skill.skillLogo.url}
                       alt=""
-                      className="h-12 m-0 object-cover"
+                      className="h-12 m-0 object-contain"
                     />
                     <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>
@@ -76,14 +50,14 @@ const Skills = () => {
               Tools
             </h3>
             <div className="grid grid-cols-3 gap-y-10 gap-x-4  justify-items-center">
-              {data.skills
+              {skills
                 .filter((skill) => skill.skillType === "tools")
                 .map((skill) => (
                   <div className="flex flex-col items-center">
                     <img
                       src={skill.skillLogo.url}
                       alt=""
-                      className="h-12 m-0 object-cover"
+                      className="h-12 m-0 object-contain"
                     />
                     <h3 className="text-gray-300 text-sm mt-6">{skill.name}</h3>
                   </div>

@@ -10,16 +10,4 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-client
-  .query({
-    query: gql`
-      query GetProjects {
-        projects {
-          name
-        }
-      }
-    `,
-  })
-  .then((result) => console.log(result));
-
 export default client;
