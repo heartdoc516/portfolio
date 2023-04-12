@@ -42,6 +42,12 @@ const GET_DATA = gql`
     authors {
       bio
       bioFrench
+      resumeEnglish {
+        url
+      }
+      resumeFrench {
+        url
+      }
       intro
       id
       name
@@ -67,7 +73,7 @@ function App() {
         <div className="skills-gradient"></div>
 
         <Navbar />
-        <Hero />
+        <Hero author={data.authors[0]} />
         <About author={data.authors[0]} />
         <Skills skills={data.skills} />
         <Projects projects={data.projects} />

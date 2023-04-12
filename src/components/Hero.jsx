@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "../../lib/LanguageContext";
 
-const Hero = () => {
+const Hero = ({ author }) => {
   const language = useLanguage();
   return (
     <section className="flex justify-center px-4" id="hero-section">
@@ -32,7 +32,12 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          href="#"
+          target="_blank"
+          href={
+            language === "english"
+              ? author.resumeEnglish.url
+              : author.resumeFrench.url
+          }
           download
           type="button"
           className="text-white bg-sky-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none dark:focus:ring-blue-800 rounded-full"
