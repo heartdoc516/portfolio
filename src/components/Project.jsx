@@ -1,4 +1,8 @@
+import { useLanguage } from "../../lib/LanguageContext";
+
 const Project = ({ project }) => {
+  const language = useLanguage();
+
   return (
     <div className="bg-gradient-to-t from-gray-900 via-slate-800 to-cyan-600/25 rounded-lg border border-gray-600">
       <div className="">
@@ -10,13 +14,15 @@ const Project = ({ project }) => {
       </div>
       <div className="p-10">
         <h3 className="text-white text-center text-2xl mb-6 tracking-widest">
-          {project.name}
+          {language === "english" ? project.name : project.nameFrench}
         </h3>
         <p className="text-gray-300 mb-6 text-center mb:text-left">
-          {project.description}
+          {language === "english"
+            ? project.description
+            : project.descriptionFrench}
         </p>
         <h4 className="text-white text-center text-2xl mb-6 tracking-widest">
-          Tech Stack
+          {language === "english" ? "Tech Stack" : "Technologies"}
         </h4>
         <div className="flex flex-wrap justify-center mb-10">
           {project.skills.map((skill) => (
@@ -54,7 +60,7 @@ const Project = ({ project }) => {
             href={project.sourceCode}
             className="text-center w-36 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 rounded-full"
           >
-            SOURCE CODE
+            {language === "english" ? "SOURCE CODE" : "CODE SOURCE"}
           </a>
         </div>
       </div>

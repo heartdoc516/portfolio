@@ -1,13 +1,16 @@
 import ContactForm from "./ContactForm";
-import { Linkedin, GitHub, Mail } from "react-feather";
+import { Linkedin, GitHub } from "react-feather";
+import { useLanguage } from "../../lib/LanguageContext";
 
 const Contact = () => {
+  const language = useLanguage();
+
   return (
     <section className="px-4" id="contact-section">
       <div className="container mx-auto">
         <div className="mt-32 mb-10">
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
-            CONTACT ME
+            {language === "english" ? "CONTACT ME" : "CONTACT"}
           </h2>
           <img
             src="../../public/logo.svg"

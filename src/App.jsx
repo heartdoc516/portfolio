@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Spinner from "./components/Spinner";
 import { gql, useQuery } from "@apollo/client";
+import { LanguageProvider } from "../lib/LanguageContext";
 
 const GET_DATA = gql`
   query MyQuery {
@@ -15,8 +16,10 @@ const GET_DATA = gql`
       demoPassword
       demoUsername
       description
+      descriptionFrench
       id
       name
+      nameFrench
       image {
         url
       }
@@ -38,6 +41,7 @@ const GET_DATA = gql`
     }
     authors {
       bio
+      bioFrench
       intro
       id
       name
@@ -58,15 +62,17 @@ function App() {
 
   return (
     <>
-      <div className="hero-gradient"></div>
-      <div className="skills-gradient"></div>
+      <LanguageProvider>
+        <div className="hero-gradient"></div>
+        <div className="skills-gradient"></div>
 
-      <Navbar />
-      <Hero />
-      <About author={data.authors[0]} />
-      <Skills skills={data.skills} />
-      <Projects projects={data.projects} />
-      <Contact />
+        <Navbar />
+        <Hero />
+        <About author={data.authors[0]} />
+        <Skills skills={data.skills} />
+        <Projects projects={data.projects} />
+        <Contact />
+      </LanguageProvider>
     </>
   );
 }

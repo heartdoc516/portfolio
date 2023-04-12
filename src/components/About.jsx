@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../lib/LanguageContext";
 
 const About = ({ author }) => {
+  const language = useLanguage();
+
   return (
     <section
       className="relative px-4 bg-transparent md:bg-gradient-to-r from-slate-950/50 to-slate-800/0"
@@ -23,10 +26,10 @@ const About = ({ author }) => {
           className="w-full md:w-1/2 mx-auto"
         >
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
-            WHO I AM
+            {language === "english" ? "WHO AM I" : "QUI JE SUIS"}
           </h2>
           <p className="text-gray-400 leading-7 text-lg text-center md:text-left">
-            {author.bio}
+            {language === "english" ? author.bio : author.bioFrench}
           </p>
         </motion.div>
       </div>

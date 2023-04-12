@@ -1,8 +1,11 @@
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { useLanguage, useLanguageDispatch } from "../../lib/LanguageContext";
 
 const Navbar = () => {
   const [isDisplayed, setIsDisplayed] = useState(false);
+  const language = useLanguage();
+  const dispatch = useLanguageDispatch();
 
   return (
     <nav className=" border-gray-200">
@@ -41,7 +44,7 @@ const Navbar = () => {
                 href="#about-section"
                 className="text-white hover:bg-white hover:text-black p-2 px-4 rounded-full"
               >
-                About
+                {language === "english" ? "About" : "À Propos"}
               </a>
             </li>
             <li>
@@ -49,7 +52,7 @@ const Navbar = () => {
                 href="#skills-section"
                 className="text-white hover:bg-white hover:text-black p-2 px-4 rounded-full"
               >
-                Skills
+                {language === "english" ? "Skills" : "Compétences"}
               </a>
             </li>
             <li>
@@ -57,7 +60,7 @@ const Navbar = () => {
                 href="#projects-section"
                 className="text-white hover:bg-white hover:text-black p-2 px-4 rounded-full"
               >
-                Projects
+                {language === "english" ? "Projects" : "Projets"}
               </a>
             </li>
 
@@ -68,6 +71,21 @@ const Navbar = () => {
               >
                 Contact
               </a>
+            </li>
+            <li>
+              <button
+                className="text-gray-400 mr-2 hover:text-gray-600"
+                onClick={() => dispatch({ type: "english" })}
+              >
+                En
+              </button>
+              <span className="text-gray-600">|</span>
+              <button
+                className="text-gray-400 ml-2 hover:text-gray-600"
+                onClick={() => dispatch({ type: "french" })}
+              >
+                Fr
+              </button>
             </li>
           </ul>
         </div>

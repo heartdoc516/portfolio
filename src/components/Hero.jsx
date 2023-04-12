@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../lib/LanguageContext";
 
 const Hero = () => {
+  const language = useLanguage();
   return (
     <section className="flex justify-center px-4" id="hero-section">
       <div className="text-center my-32">
@@ -23,7 +25,7 @@ const Hero = () => {
             viewport={{ one: true }}
             className="mb-10 text-2xl font-thin tracking-widest"
           >
-            Web Developper
+            {language === "english" ? "Web Developer" : "Développeur Web"}
           </motion.div>
         </h1>
         <motion.a
@@ -35,7 +37,7 @@ const Hero = () => {
           type="button"
           className="text-white bg-sky-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none dark:focus:ring-blue-800 rounded-full"
         >
-          RESUME
+          {language === "english" ? "Resume" : "C.V."}
         </motion.a>
 
         <motion.a
