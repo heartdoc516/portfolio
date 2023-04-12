@@ -38,7 +38,7 @@ const Navbar = () => {
         </button>
         <MobileMenu isDisplayed={isDisplayed} />
         <div className={`hidden md:w-auto md:block`}>
-          <ul className="font-medium flex flex-col gap-4 items-center p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800/75 md:bg-transparent">
+          <ul className="font-medium flex flex-col md:gap-2 gap-4 items-center p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800/75 md:bg-transparent">
             <li>
               <a
                 href="#about-section"
