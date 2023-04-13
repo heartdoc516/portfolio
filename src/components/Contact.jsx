@@ -2,7 +2,7 @@ import ContactForm from "./ContactForm";
 import { Linkedin, GitHub } from "react-feather";
 import { useLanguage } from "../../lib/LanguageContext";
 
-const Contact = () => {
+const Contact = ({ author }) => {
   const language = useLanguage();
 
   return (
@@ -12,11 +12,7 @@ const Contact = () => {
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
             {language === "english" ? "CONTACT ME" : "CONTACT"}
           </h2>
-          <img
-            src="../../public/logo.svg"
-            alt=""
-            className="w-28 mx-auto mb-12"
-          />
+          <img src={author.logo.url} alt="" className="w-28 mx-auto mb-12" />
 
           <ContactForm />
 

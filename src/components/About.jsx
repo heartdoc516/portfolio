@@ -16,7 +16,7 @@ const About = ({ author }) => {
           transition={{ delay: 1.5 }}
           className="relative w-full mx-auto px-10 md:px-0 md:w-1/4"
         >
-          <img src="../public/avatar.svg" alt="" className="mx-auto" />
+          <img src={author.picture.url} alt="" className="mx-auto" />
         </motion.div>
 
         <motion.div

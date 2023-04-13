@@ -2,7 +2,7 @@ import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { useLanguage, useLanguageDispatch } from "../../lib/LanguageContext";
 
-const Navbar = () => {
+const Navbar = ({ author }) => {
   const [isDisplayed, setIsDisplayed] = useState(false);
   const language = useLanguage();
   const dispatch = useLanguageDispatch();
@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className=" border-gray-200">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
         <a href="#hero-section" className="flex items-center">
-          <img src="../public/logo.svg" className="h-6 md:h-8" alt="Logo" />
+          <img src={author.logo.url} className="h-6 md:h-8" alt="Logo" />
         </a>
         <button
           onClick={() => setIsDisplayed(!isDisplayed)}
