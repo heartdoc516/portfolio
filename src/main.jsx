@@ -4,7 +4,7 @@ import App from "./App";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "https://api-ca-central-1.hygraph.com/v2/clfwla43g5hgq01uo83wsbppw/master",
+  uri: import.meta.env.VITE_REACT_APP_API_URL,
   cache: new InMemoryCache(),
 });
 
