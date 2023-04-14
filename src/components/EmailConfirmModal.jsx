@@ -8,7 +8,7 @@ const EmailConfirmModal = ({ modalIsOpen, closeModal }) => {
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       shouldCloseOnOverlayClick={true}
-      className="p-10 w-1/3 mx-auto mt-80 bg-slate-800 rounded-lg text-center text-lg font-semibold tracking-wide"
+      className="p-10 w-full md:w-1/3 mx-auto mt-80 bg-slate-800 rounded-lg text-center text-lg font-semibold tracking-wide"
       style={{
         overlay: {
           backgroundColor: "#11182750",

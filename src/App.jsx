@@ -75,8 +75,8 @@ function App() {
   return (
     <>
       <LanguageProvider>
-        <div className="hero-gradient"></div>
-        <div className="skills-gradient"></div>
+        <div className="hero-gradient hidden lg:block"></div>
+        <div className="skills-gradient hidden lg:block"></div>
 
         <Navbar author={data.authors[0]} />
         <Hero author={data.authors[0]} />
