@@ -12,7 +12,11 @@ const Contact = ({ author }) => {
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
             {language === "english" ? "CONTACT ME" : "CONTACT"}
           </h2>
-          <img src={author.logo.url} alt="" className="w-28 mx-auto mb-12" />
+          <img
+            src="../../public/logo-2-white.png"
+            alt=""
+            className="w-28 mx-auto mb-12"
+          />
 
           <ContactForm />
 
@@ -32,6 +36,11 @@ const Contact = ({ author }) => {
               <GitHub className="text-cyan-500" />
             </a>
           </div>
+          <img
+            src="../../public/about-me.png"
+            alt="about-me"
+            className="md:w-1/2 mx-auto"
+          />
 
           <div className="text-gray-400 text-xs text-center">
             Coded by Me &#9400; 2023

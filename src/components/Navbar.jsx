@@ -11,7 +11,11 @@ const Navbar = ({ author }) => {
     <nav className=" border-gray-200">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
         <a href="#hero-section" className="flex items-center">
-          <img src={author.logo.url} className="h-6 md:h-8" alt="Logo" />
+          <img
+            src="../../public/logo-2-white.png"
+            className="h-6 md:h-12"
+            alt="Logo"
+          />
         </a>
         <button
           onClick={() => setIsDisplayed(!isDisplayed)}
