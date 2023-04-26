@@ -12,13 +12,9 @@ const Contact = ({ author }) => {
           <h2 className="text-white text-3xl font-bold tracking-widest mb-10 text-center">
             {language === "english" ? "CONTACT ME" : "CONTACT"}
           </h2>
-          <img
-            src="../../public/logo-2-white.png"
-            alt=""
-            className="w-28 mx-auto mb-12"
-          />
+          <img src={author.logo.url} alt="" className="w-28 mx-auto mb-12" />
 
-          <ContactForm />
+          <ContactForm author={author} />
 
           <div className="flex flex-row justify-center mb-8">
             <a
@@ -37,7 +33,7 @@ const Contact = ({ author }) => {
             </a>
           </div>
           <img
-            src="../../public/about-me.png"
+            src={author.pixelArt1.url}
             alt="about-me"
             className="md:w-1/2 mx-auto"
           />

@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import EmailConfirmModal from "./EmailConfirmModal";
 import { useLanguage } from "../../lib/LanguageContext";
 
-const ContactForm = () => {
+const ContactForm = ({ author }) => {
   const form = useRef();
   const language = useLanguage();
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -37,6 +37,7 @@ const ContactForm = () => {
       <EmailConfirmModal
         modalIsOpen={modalIsOpen}
         closeModal={handleCloseModal}
+        author={author}
       />
       <form
         ref={form}

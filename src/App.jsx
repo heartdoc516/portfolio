@@ -48,6 +48,12 @@ const GET_DATA = gql`
       logo {
         url
       }
+      pixelArt1 {
+        url
+      }
+      pixelArt2 {
+        url
+      }
       resumeEnglish {
         url
       }
